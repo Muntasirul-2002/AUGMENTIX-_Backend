@@ -11,6 +11,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Todo backend!");
+  });
 // Routes
 app.use('/api/todos', todoRoutes);
 
